@@ -2,7 +2,7 @@ import HeroImage from '../assets/hero.svg'
 
 function Beranda() {
     return (
-        <div className='container'>
+        <div className='container my-3'>
             <div className='row'>
                 <div className='col-6 d-flex align-items-center'>
                     <div>

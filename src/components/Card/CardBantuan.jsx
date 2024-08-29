@@ -2,10 +2,10 @@
 function CardBantuan({ icon, title, detail }) {
     return (
         <div className="col-4">
-            <div className="border py-2 px-3">
-                <div className="d-flex justify-content-start">
+            <div className="border py-2 px-3 rounded-4 py-3">
+                <div className="d-flex justify-content-start align-items-center mb-2">
                     <img src={icon} width={40} height={40}/>
-                    <h1 className="fs-6 fw-bold">{title}</h1>
+                    <h1 className="fs-6 fw-bold ms-1">{title}</h1>
                 </div>
                 <div style={{ height:'250px'}}>
                     {detail.map((item, index) => (

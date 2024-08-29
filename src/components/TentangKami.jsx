@@ -1,6 +1,6 @@
 function TentangKami() {
     return(
-        <div className="container">
+        <div className="container my-3">
             <h1 className="fw-bold">Visi</h1>
             <p>Menjadi ekosistem digital unggulan UMKM di seluruh Indonesia.</p>
 

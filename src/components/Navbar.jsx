@@ -20,27 +20,27 @@ function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/">Beranda</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/tentang-kami">Tentang Kami</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/bantuan">Bantuan</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/media">Media</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item mx-2">
                             <Link className="nav-link" to="/kontak">Kontak</Link>
                         </li>
                         {!isLoggedIn ? (
-                            <li className="nav-item">
+                            <li className="nav-item mx-2">
                                 <Link to="/login" className="btn btn-light fw-bold" style={{ color: '#029da8', border: '1px solid #029da8' }}>Login</Link>
                             </li>
                         ) : (
-                            <li className="nav-item">
+                            <li className="nav-item mx-2">
                                 <button onClick={handleLogout} className="btn btn-danger fw-bold">Logout</button>
                             </li>
                         )}

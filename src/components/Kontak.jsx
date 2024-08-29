@@ -1,6 +1,6 @@
 function Kontak() {
     return (
-        <div className="container">
+        <div className="container my-3">
             <h1>Hubungi Kami</h1>
             <p>Memiliki pertanyaan lebih lanjut seputar PaDi UMKM ?</p>
             <p>Silahkan menghubungi Kami secara langsung.</p>
