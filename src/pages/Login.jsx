@@ -30,48 +30,61 @@ function Login() {
   }
 
   return (
-    <div className="container my-3">
-      <h1 className="text-center">Login</h1>
-      <div className="d-flex justify-content-center">
+    <div className="container mx-auto my-3">
+      <h1 className="text-center text-3xl font-bold">Login</h1>
+      <div className="flex justify-center mt-3">
         <p
-          className="text-center bg-warning rounded-3 p-2 fw-semibold"
+          className="text-center bg-yellow-400 rounded-3xl p-2 font-semibold"
           style={{ width: "32rem" }}
         >
           Silahkan login dengan username : 'abcde' dan password : '12345'
         </p>
       </div>
-      <div className="d-flex justify-content-center">
+      <div className="flex justify-center mt-3">
         <div
-          className="border border-dark p-3 rounded-4"
+          className="border border-black p-3 rounded-3xl"
           style={{ width: "22rem" }}
         >
           <form onSubmit={handleSubmit}>
-            <div className="form-floating mb-3">
+            <div className="relative mb-4">
               <input
                 type="text"
-                className="form-control"
+                className="form-input w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer"
                 id="floatingInput"
-                placeholder="Username"
+                placeholder=" "
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
               />
-              <label htmlFor="floatingInput">Username</label>
+              <label
+                htmlFor="floatingInput"
+                className="absolute text-gray-500 duration-200 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3"
+              >
+                Username
+              </label>
             </div>
-            <div className="form-floating">
+            <div className="relative">
               <input
                 type="password"
-                className="form-control"
+                className="form-input w-full px-3 py-2 rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent peer"
                 id="floatingPassword"
-                placeholder="Password"
+                placeholder=" "
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <label htmlFor="floatingPassword">Password</label>
+              <label
+                htmlFor="floatingPassword"
+                className="absolute text-gray-500 duration-200 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white px-2 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-3"
+              >
+                Password
+              </label>
             </div>
-            <div className="d-flex justify-content-center mt-3">
-              <button type="submit" className="btn btn-primary fw-bold">
+            <div className="flex justify-center mt-3">
+              <button
+                type="submit"
+                className="font-bold text-white bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded-lg"
+              >
                 Login
               </button>
             </div>

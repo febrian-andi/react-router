@@ -1,7 +1,9 @@
+import { useState } from "react";
 import padiUmkmLogo from "../assets/padi-umkm.svg";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const isLoggedIn = sessionStorage.getItem("login") === "true";
 
   const handleLogout = () => {
@@ -10,64 +12,97 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <img src={padiUmkmLogo} alt="padi-umkm-logo" />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+    <nav className="bg-gray-100">
+      <div className="container mx-auto md:flex items-center py-3 px-4">
+        <div className="flex justify-between">
+          <Link className="text-teal-600 font-bold" to="/">
+            <img src={padiUmkmLogo} alt="padi-umkm-logo" />
+          </Link>
+          <button
+            className="text-gray-600 md:hidden focus:outline-none"
+            type="button"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          className={`${
+            isOpen ? "block" : "hidden"
+          } w-full md:flex md:items-center md:w-auto md:ml-8`}
+          id="navbarNav"
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/">
+          <ul className="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0">
+            <li>
+              <Link
+                className="block text-gray-800 hover:text-teal-600 px-4 py-2 rounded md:inline-block"
+                to="/"
+              >
                 Beranda
               </Link>
             </li>
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/tentang-kami">
+            <li>
+              <Link
+                className="block text-gray-800 hover:text-teal-600 px-4 py-2 rounded md:inline-block"
+                to="/tentang-kami"
+              >
                 Tentang Kami
               </Link>
             </li>
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/bantuan">
+            <li>
+              <Link
+                className="block text-gray-800 hover:text-teal-600 px-4 py-2 rounded md:inline-block"
+                to="/bantuan"
+              >
                 Bantuan
               </Link>
             </li>
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/media">
+            <li>
+              <Link
+                className="block text-gray-800 hover:text-teal-600 px-4 py-2 rounded md:inline-block"
+                to="/media"
+              >
                 Media
               </Link>
             </li>
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/kontak">
+            <li>
+              <Link
+                className="block text-gray-800 hover:text-teal-600 px-4 py-2 rounded md:inline-block"
+                to="/kontak"
+              >
                 Kontak
               </Link>
             </li>
             {!isLoggedIn ? (
-              <li className="nav-item mx-2">
+              <li>
                 <Link
                   to="/login"
-                  className="btn btn-light fw-bold"
-                  style={{ color: "#029da8", border: "1px solid #029da8" }}
+                  className="block bg-white text-teal-600 font-bold border border-teal-600 px-4 py-2 rounded hover:bg-teal-600 hover:text-white transition md:inline-block"
                 >
                   Login
                 </Link>
               </li>
             ) : (
-              <li className="nav-item mx-2">
+              <li>
                 <button
                   onClick={handleLogout}
-                  className="btn btn-danger fw-bold"
+                  className="block bg-red-500 text-white font-bold px-4 py-2 rounded hover:bg-red-600 transition md:inline-block"
                 >
                   Logout
                 </button>

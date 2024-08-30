@@ -1,24 +1,32 @@
 function Kontak() {
   return (
-    <div className="container my-3">
-      <div className="mb-5">
-        <h1 className="fs-3 fw-bold">Hubungi Kami</h1>
-        <p>Memiliki pertanyaan lebih lanjut seputar PaDi UMKM ?<br></br>Silahkan menghubungi Kami secara langsung.</p>
+    <div className="container mx-auto my-8">
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold">Hubungi Kami</h1>
+        <p className="mt-4">
+          Memiliki pertanyaan lebih lanjut seputar PaDi UMKM?
+          <br />
+          Silakan menghubungi Kami secara langsung.
+        </p>
       </div>
-      <div className="row px-4">
-        <div className="col-6">
-          <h2 className="fs-4 fw-bold">Layanan Informasi Pengguna</h2>
-          <h3 className="fs-5 fw-bold">Email</h3>
-          <p>cs@padiumkm.id</p>
-          <h3 className="fs-5 fw-bold">Whatsapp</h3>
-          <p>+62899999999</p>
-          <h3 className="fs-5 fw-bold">Senin - Jumat | 08.00 - 17.00 WIB</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+        <div>
+          <h2 className="text-xl font-bold">Layanan Informasi Pengguna</h2>
+          <h3 className="text-lg font-bold mt-4">Email</h3>
+          <p className="mt-1">cs@padiumkm.id</p>
+          <h3 className="text-lg font-bold mt-4">Whatsapp</h3>
+          <p className="mt-1">+62899999999</p>
+          <h3 className="text-lg font-bold mt-4">
+            Senin - Jumat | 08.00 - 17.00 WIB
+          </h3>
         </div>
-        <div className="col-6">
-          <h2 className="fs-4 fw-bold">Kantor Kami</h2>
-          <h3 className="fs-5 fw-bold">PaDi UMKM Headquarters</h3>
-          <p>Gedung Telkom Direktorat Business and Technology<br></br>
-            Jln. Prof. Dr. Soepomo No. 139, Jakarta Selatan, DKI Jakrta, 12810,
+        <div>
+          <h2 className="text-xl font-bold">Kantor Kami</h2>
+          <h3 className="text-lg font-bold mt-4">PaDi UMKM Headquarters</h3>
+          <p className="mt-1">
+            Gedung Telkom Direktorat Business and Technology
+            <br />
+            Jln. Prof. Dr. Soepomo No. 139, Jakarta Selatan, DKI Jakarta, 12810,
             Indonesia
           </p>
         </div>

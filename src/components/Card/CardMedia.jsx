@@ -1,13 +1,13 @@
 function CardMedia({ image, title, detail }) {
   console.log(title);
   return (
-    <div className="col-4">
-      <div className="border py-2 px-3 rounded-4">
-        <div className="d-flex justify-content-center">
-          <img height={320} src={image} />
+    <div className="col-span-1">
+      <div className="border border-gray-300 py-4 px-5 rounded-lg shadow-md">
+        <div className="flex justify-center">
+          <img className="h-80 object-cover" src={image} alt={title} />
         </div>
-        <h2 className="fs-4">{title}</h2>
-        <p>{detail}</p>
+        <h2 className="text-xl font-semibold mt-4">{title}</h2>
+        <p className="mt-2">{detail}</p>
       </div>
     </div>
   );
